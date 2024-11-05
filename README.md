@@ -2,15 +2,6 @@
 
 A project built to enhance my skills in **Rust** and **SurrealDB** during my layoff period. This project combines my interests in scalable database design and high-performance Rust development.
 
-## Table of Contents
-- [Features](#features)
-- [Motivation](#motivation)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - **High Performance**: Leveraging Rust’s concurrency and memory safety for optimized performance.
