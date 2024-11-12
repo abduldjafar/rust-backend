@@ -1,4 +1,4 @@
-# Project Name
+# Rust  Backend
 
 A project built to enhance my skills in **Rust** and **SurrealDB** during my layoff period. This project combines my interests in scalable database design and high-performance Rust development.
 
