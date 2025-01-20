@@ -37,7 +37,7 @@ After being laid off, I wanted to make the most of my time by deepening my knowl
 Run the application with:
 ```bash
 cargo run
-
+```
 ## Generating RS256 Private and Public Keys
 
 Follow these steps to generate and configure the necessary asymmetric keys:
