@@ -34,7 +34,65 @@ After being laid off, I wanted to make the most of my time by deepening my knowl
     - Start the SurrealDB instance and configure it as needed.
 
 ## Usage
-
 Run the application with:
 ```bash
 cargo run
+
+## Generating RS256 Private and Public Keys
+
+Follow these steps to generate and configure the necessary asymmetric keys:
+
+---
+
+#### 1. **Generate Keys**
+1. Visit the [Online RSA Key Generator](https://travistidwell.com/jsencrypt/demo/).
+2. Choose a **key size of 4096 bits** (recommended for compatibility with the `jsonwebtoken` crate).
+   - Note: A 2048-bit key is acceptable but less secure. Avoid 1024-bit keys, as they may cause errors.
+3. Click **"Generate New Keys"** and wait for the keys to be generated.
+
+---
+
+#### 2. **Configure Access Token Keys**
+- **Private Key**:
+  1. Copy the generated private key.
+  2. Convert it to Base64 format using a tool like [Base64 Encode](https://www.base64encode.org/).
+  3. Paste the Base64-encoded private key into your `.env` file as:
+     ```
+     ACCESS_TOKEN_PRIVATE_KEY=<Base64-encoded private key>
+     ```
+
+- **Public Key**:
+  1. Copy the corresponding public key.
+  2. Convert it to Base64 format.
+  3. Paste the Base64-encoded public key into your `.env` file as:
+     ```
+     ACCESS_TOKEN_PUBLIC_KEY=<Base64-encoded public key>
+     ```
+
+---
+
+#### 3. **Configure Refresh Token Keys**
+Repeat the same steps for the refresh token keys:
+
+- **Private Key**:
+  1. Generate a new private key.
+  2. Convert it to Base64 format.
+  3. Add it to your `.env` file as:
+     ```
+     REFRESH_TOKEN_PRIVATE_KEY=<Base64-encoded private key>
+     ```
+
+- **Public Key**:
+  1. Copy the corresponding public key.
+  2. Convert it to Base64 format.
+  3. Add it to your `.env` file as:
+     ```
+     REFRESH_TOKEN_PUBLIC_KEY=<Base64-encoded public key>
+     ```
+
+---
+
+### Final Notes
+- Ensure your `.env` file is secure and not exposed to unauthorized access.
+- Use unique key pairs for access tokens and refresh tokens for better security.
+- Test your application to confirm the keys are correctly integrated.
