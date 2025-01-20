@@ -81,7 +81,6 @@ pub async fn save_token_data_to_redis(
     token_details: &TokenDetails,
     max_age: i64,
 ) -> Result<()> {
-    // Fully specify Result type
 
     let mut redis_client = match data.redis_client.get_multiplexed_async_connection().await {
         Ok(client) => client,
@@ -108,7 +107,6 @@ pub async fn save_token_data_to_redis(
 }
 
 pub async fn delete_token_data_in_redis(data: &AppState, token: String) -> Result<()> {
-    // Fully specify Result type
 
     let mut redis_client = match data.redis_client.get_multiplexed_async_connection().await {
         Ok(client) => client,
